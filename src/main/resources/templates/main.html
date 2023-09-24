@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Trang Chu</title>
+    <link rel="stylesheet"
+          th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css}"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link th:href="@{/css/styles.css}" rel="stylesheet"/>
+    <style>
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+
+        body {
+            margin-bottom: 60px;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 80px;
+            background-color: orange;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<br/>
+<th:insert data-th-insert=="~{navbar}"></th:insert>
+<br>
+<div class="container" style="margin-bottom: 120px">
+    <th:insert data-th-insert="~{${main}}"></th:insert>
+</div>
+<footer class="footer">
+    <th:insert data-th-insert=="~{footer}"></th:insert>
+</footer>
+</body>
+</html>
